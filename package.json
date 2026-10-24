@@ -1,0 +1,21 @@
+{
+  "name": "white-oak-stewardship-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "White Oak Stewardship — marketing site (SATCORP)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "og": "python scripts/build-og-images.py",
+    "a11y": "axe http://localhost:4173/ http://localhost:4173/about.html http://localhost:4173/services.html http://localhost:4173/memberships.html http://localhost:4173/faq.html http://localhost:4173/contact.html http://localhost:4173/contact/thank-you.html http://localhost:4173/blog/ http://localhost:4173/blog/winter-checklist-second-home.html http://localhost:4173/blog/what-home-watch-actually-covers.html http://localhost:4173/legal/privacy.html http://localhost:4173/legal/terms.html --tags wcag2a,wcag2aa,wcag21aa,wcag22aa"
+  },
+  "devDependencies": {
+    "@axe-core/cli": "^4.14.0",
+    "vite": "^7.1.5"
+  },
+  "dependencies": {
+    "resend": "^6.34.1"
+  }
+}

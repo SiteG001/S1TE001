@@ -1,0 +1,7 @@
+# White Oak Stewardship
+# Every page on this site is meant to be found. Nothing is disallowed.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://whiteoakstewardship.com/sitemap.xml

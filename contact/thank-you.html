@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include partials/head.html -->
+    <title>Thank you | White Oak Stewardship</title>
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="Your consultation request has been received." />
+    <link rel="canonical" href="https://whiteoakstewardship.com/contact.html" />
+  </head>
+
+  <body>
+    <!--#include partials/header.html -->
+
+    <main id="main" tabindex="-1">
+      <section class="section">
+        <div class="container container--narrow">
+          <div class="form-success">
+            <h1 class="h2" data-thanks>Thank you.</h1>
+            <p>
+              Katie will call or email within one business day. A copy of this note is on its way to
+              your inbox.
+            </p>
+            <p>Something urgent? Call or text <a href="tel:+14708593583">470-859-3583</a>.</p>
+            <p><a href="/">Back to the home page</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--#include partials/footer.html -->
+    <script>
+      (function () {
+        var n = new URLSearchParams(location.search).get('name');
+        if (n) document.querySelector('[data-thanks]').textContent = 'Thank you, ' + n.slice(0, 60) + '.';
+      })();
+    </script>
+  </body>
+</html>

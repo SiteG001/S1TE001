@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include partials/head.html -->
+    <title>Book a Private Consultation | White Oak Stewardship</title>
+    <meta
+      name="description"
+      content="Book a private consultation for home watch and concierge stewardship of your North Georgia second home. Call 470-859-3583 or send a few details and Katie will reply within one business day."
+    />
+    <link rel="canonical" href="https://whiteoakstewardship.com/contact.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://whiteoakstewardship.com/contact.html" />
+    <meta property="og:title" content="Book a Private Consultation | White Oak Stewardship" />
+    <meta
+      property="og:description"
+      content="Thirty to sixty minutes, in person or by phone, about your property and what you would rather never handle again."
+    />
+    <meta property="og:image" content="https://whiteoakstewardship.com/img/white-oak-stewardship-og-home.jpg" />
+    <!--#include partials/schema-localbusiness.html -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "url": "https://whiteoakstewardship.com/contact.html",
+        "name": "Book a private consultation",
+        "about": { "@id": "https://whiteoakstewardship.com/#business" }
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--#include partials/header.html -->
+
+    <main id="main" tabindex="-1">
+      <section class="page-head">
+        <div class="container">
+          <p class="breadcrumb"><a href="/">Home</a> &nbsp;/&nbsp; Contact</p>
+          <p class="eyebrow">Book a consultation</p>
+          <h1>Start with a conversation about your home</h1>
+          <p>
+            Thirty to sixty minutes, in person or by phone. Your property, your concerns, how often
+            you are here, and what you would rather never handle again. No obligation, and no
+            pressure to choose a membership on the call.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split">
+          <div>
+            <h2>Tell us about the property</h2>
+            <p class="lede mt-5">
+              Required fields are marked. Everything else simply makes the first conversation more
+              useful.
+            </p>
+
+            <p class="form-banner mt-5" data-error-banner hidden role="alert">
+              We could not send that. Please check the highlighted details, or call or text
+              <a href="tel:+14708593583">470-859-3583</a>.
+            </p>
+
+            <form class="form mt-6" id="consult" data-consult-form action="/api/consult" method="post">
+              <p class="form-status" data-state="idle" role="status" aria-live="polite" tabindex="-1"></p>
+
+              <div class="field-row">
+                <div class="field">
+                  <label for="name">Your name <span class="req" aria-hidden="true">*</span></label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    required
+                    aria-required="true"
+                    data-error="Please tell us your name."
+                  />
+                </div>
+                <div class="field">
+                  <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                    aria-required="true"
+                    data-error="Please check your email address."
+                  />
+                </div>
+              </div>
+
+              <div class="field-row">
+                <div class="field">
+                  <label for="phone">Phone</label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel" />
+                  <p class="hint" id="phone-hint">Best if you would rather be called than emailed.</p>
+                </div>
+                <div class="field">
+                  <label for="location">
+                    Property location <span class="req" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    id="location"
+                    name="location"
+                    type="text"
+                    placeholder="Big Canoe, Jasper, Ellijay…"
+                    required
+                    aria-required="true"
+                    data-error="Where is the property? A town is enough."
+                  />
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="tier">Which membership are you considering?</label>
+                <select id="tier" name="tier" data-tier-select>
+                  <option value="">Not sure yet, help me decide</option>
+                  <option value="Home Watch (founding rate $249/mo)">
+                    Home Watch (founding rate $249/mo)
+                  </option>
+                  <option value="Concierge">Concierge</option>
+                  <option value="Private Stewardship">Private Stewardship</option>
+                  <option value="One-time service, no membership">
+                    A one-time service, no membership
+                  </option>
+                </select>
+              </div>
+
+              <details class="form-more">
+                <summary>A little more (optional)</summary>
+                <div class="form-more__body">
+                  <div class="field">
+                    <label for="source">How did you hear about White Oak Stewardship?</label>
+                    <input id="source" name="source" type="text" />
+                  </div>
+
+                  <div class="field">
+                    <label for="message">What would you like handled?</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="How often you are at the property, what worries you when you are away, anything that has already gone wrong."
+                    ></textarea>
+                  </div>
+                </div>
+              </details>
+
+              <!-- Honeypot: hidden from people and screen readers, visible to naive bots -->
+              <div class="hp" aria-hidden="true">
+                <label for="company_website">Company website</label>
+                <input id="company_website" name="company_website" type="text" tabindex="-1" autocomplete="off" />
+              </div>
+              <input type="hidden" name="_ts" value="" data-form-ts />
+
+              <label class="consent">
+                <input
+                  type="checkbox"
+                  name="consent"
+                  required
+                  aria-required="true"
+                  data-error="Please confirm we may contact you."
+                />
+                <span>
+                  I agree to be contacted about my enquiry and have read the
+                  <a href="/legal/privacy.html">privacy notice</a>.
+                </span>
+              </label>
+
+              <div class="btn-row">
+                <button class="btn btn--gold" type="submit">Request my consultation</button>
+                <a class="btn btn--ghost" href="tel:+14708593583">Or call 470-859-3583</a>
+              </div>
+
+              <p class="form-note">
+                Your details go to Katie by email and are used only to reply to you. See the
+                <a href="/legal/privacy.html#enquiries">privacy notice</a>. Prefer not to use the
+                form? Call or text instead; both reach Katie directly.
+              </p>
+            </form>
+          </div>
+
+          <div>
+            <dl class="contact-rail">
+              <div class="contact-item">
+                <dt>Call or text</dt>
+                <dd><a href="tel:+14708593583">470-859-3583</a></dd>
+              </div>
+              <div class="contact-item">
+                <dt>Email</dt>
+                <dd>
+                  <a href="mailto:consultations@WhiteOakStewardship.com">consultations@WhiteOakStewardship.com</a>
+                </dd>
+              </div>
+              <div class="contact-item">
+                <dt>Response time</dt>
+                <dd>Within one business day</dd>
+              </div>
+              <div class="contact-item">
+                <dt>Service area</dt>
+                <dd>The North Georgia mountains</dd>
+              </div>
+            </dl>
+
+            <div class="card mt-6">
+              <h3>What happens next</h3>
+              <ul class="card-list">
+                <li>Katie replies to arrange a time that suits you</li>
+                <li>A thirty-to-sixty minute consultation, at the home or by phone</li>
+                <li>A written stewardship plan and membership recommendation</li>
+                <li>Enrollment only if the plan is right, and nothing is signed on the call</li>
+              </ul>
+            </div>
+
+            <p class="notice mt-6">
+              <strong>Founding memberships are open.</strong> The first ten Home Watch members pay
+              the founding rate of $249 a month and keep that rate for the life of the membership.
+              <a href="/memberships.html">Compare all three levels →</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--forest">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Before you call</p>
+            <h2>Things worth having to hand</h2>
+            <p>
+              None of it is required, and none of it needs to be exact. It just makes the first
+              thirty minutes count for more.
+            </p>
+          </div>
+          <ol class="steps">
+            <li>
+              <h3>How often you are there</h3>
+              <p>Weekends, seasons, or the occasional week. The visit rhythm is built around it.</p>
+            </li>
+            <li>
+              <h3>What already worries you</h3>
+              <p>The corner that leaks, the crawl space, the vendor who never quite finishes.</p>
+            </li>
+            <li>
+              <h3>Who currently has access</h3>
+              <p>Cleaners, neighbours, family, a lockbox. We work with what already exists.</p>
+            </li>
+            <li>
+              <h3>Whether it is ever rented</h3>
+              <p>Short-term rental changes the turnover rhythm and the readiness standard.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <!--#include partials/footer.html -->
+  </body>
+</html>

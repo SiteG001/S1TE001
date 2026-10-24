@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include partials/head.html -->
+    <title>Memberships | White Oak Stewardship</title>
+    <meta
+      name="description"
+      content="Three home watch and concierge memberships for North Georgia second homes: Home Watch, Concierge and Private Stewardship. Founding rate $249/month for the first 10 members, held for the life of the membership."
+    />
+    <link rel="canonical" href="https://whiteoakstewardship.com/memberships.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://whiteoakstewardship.com/memberships.html" />
+    <meta property="og:title" content="Memberships | White Oak Stewardship" />
+    <meta
+      property="og:description"
+      content="See exactly which rooms, systems and services each membership covers."
+    />
+    <meta property="og:image" content="https://whiteoakstewardship.com/img/white-oak-stewardship-og-memberships.jpg" />
+    <!--#include partials/schema-localbusiness.html -->
+  </head>
+
+  <body>
+    <!--#include partials/header.html -->
+
+    <main id="main" tabindex="-1">
+      <section class="page-head">
+        <div class="container">
+          <p class="breadcrumb"><a href="/">Home</a> &nbsp;/&nbsp; Memberships</p>
+          <p class="eyebrow">Memberships</p>
+          <h1>Choose how much you would rather never think about again</h1>
+          <p>
+            Every membership begins with the same foundation: scheduled visits, documented in photo
+            and video. What changes between levels is how much of the day-to-day passes to us.
+          </p>
+        </div>
+      </section>
+
+      <!-- Tiers -->
+      <section class="section">
+        <div class="container">
+          <div class="tiers">
+            <article class="tier" id="home-watch">
+              <h2 class="tier__name">Home Watch</h2>
+              <p class="tier__for">
+                For second-home owners and seasonal residents who want a trusted local professional
+                monitoring the property.
+              </p>
+              <p class="tier__founding">
+                <strong>Founding rate $249/month</strong> for the first 10 members,
+                held for the life of the membership
+              </p>
+              <p class="tier__includes">Includes</p>
+              <ul class="tier__features">
+                <li>Scheduled home inspections with video walk-through reports</li>
+                <li>Visual checks for leaks, cracks, storm damage and environmental concerns</li>
+                <li>Water heater, HVAC and plumbing condition checks</li>
+                <li>Photo and video documentation of property condition</li>
+                <li>Prompt notification of anything needing attention</li>
+                <li>Basic communication with approved vendors</li>
+                <li>Verification that scheduled cleaning or maintenance was completed properly</li>
+              </ul>
+              <a class="btn btn--ghost btn--block" href="/contact.html?tier=home-watch" data-track="tier_details_click" data-track-tier="home-watch">
+                Become a Founding Member
+              </a>
+            </article>
+
+            <article class="tier tier--featured" id="concierge">
+              <span class="tier__flag">Recommended for most homes</span>
+              <h2 class="tier__name">Concierge</h2>
+              <p class="tier__for">
+                For busy homeowners, vacation property owners and Airbnb hosts who want hands-on
+                support without managing the details themselves.
+              </p>
+              <p class="tier__founding">Everything in Home Watch, plus:</p>
+              <p class="tier__includes">Adds</p>
+              <ul class="tier__features">
+                <li>Home arrival preparation before owner visits</li>
+                <li>Restocking of household essentials</li>
+                <li>Grocery and supply coordination</li>
+                <li>Vendor scheduling and follow-up</li>
+                <li>Cleaning crew and service quality checks</li>
+                <li>Seasonal home preparation</li>
+                <li>Personalized communication and special requests</li>
+                <li>Coordination of home-related tasks while you are away</li>
+              </ul>
+              <a class="btn btn--primary btn--block" href="/contact.html?tier=concierge" data-track="tier_details_click" data-track-tier="concierge">
+                Book a consultation
+              </a>
+            </article>
+
+            <article class="tier" id="stewardship">
+              <h2 class="tier__name">Private Stewardship</h2>
+              <p class="tier__for">
+                For luxury second-home owners who want dedicated local support for both the home
+                and the lifestyle around it.
+              </p>
+              <p class="tier__founding">Everything in Concierge, plus:</p>
+              <p class="tier__includes">Adds</p>
+              <ul class="tier__features">
+                <li>Priority scheduling and service requests</li>
+                <li>Advanced vendor management</li>
+                <li>Event preparation and seasonal decorating coordination</li>
+                <li>Customized property management solutions</li>
+                <li>Airbnb guest readiness support</li>
+                <li>Special occasion and lifestyle assistance</li>
+                <li>Additional concierge requests as needed</li>
+                <li>A personalized stewardship plan for the property</li>
+              </ul>
+              <a class="btn btn--ghost btn--block" href="/contact.html?tier=stewardship" data-track="tier_details_click" data-track-tier="stewardship">
+                Book a consultation
+              </a>
+            </article>
+          </div>
+
+          <p class="notice" style="margin-top: 2.5rem">
+            <strong>Billed monthly.</strong> No long contracts. Card and bank transfer both
+            supported. Members may add à la carte services at any time. Enrollment
+            requires acceptance of the Service Agreement and Liability Waiver.
+          </p>
+        </div>
+      </section>
+
+      <!-- UNDER DEVELOPMENT: Coverage visualizer is hidden (hidden + display:none on the section below).
+           To re-enable, remove those two attributes. See Assets/Home_Harmony_3D_Coverage_Visualizer_Execution_Plan.md. -->
+      <!-- =====================================================================
+           Coverage visualizer.
+           An authored architectural section of the archetypal mountain home.
+           Every zone is a `<g data-zone>` holding its own fill, fixtures and
+           label, so flipping `data-covered` dims the whole room as one object.
+           Structure — walls, plates, roof, chimney, grade — is drawn last, over
+           the zones, and never changes state: the house is always there, the
+           service is what varies.
+
+           The drawing is aria-hidden decoration. The tier controls are real
+           radio inputs, the readout is a live region, and the comparison table
+           below carries the actual content. Remove the JavaScript and the
+           section is still complete: zones ship in their Home Watch state,
+           which is the tier the radio group loads on.
+
+           This SVG is also the designated no-WebGL / reduced-motion fallback
+           for the 3D cutaway (3D plan §2.4). Keep the eight zone ids in sync
+           with TIER_ZONES in src/js/visualizer.js and with the 3D scene graph.
+           ================================================================== -->
+      <section class="section section--forest" data-visualizer data-active-tier="home-watch" hidden style="display:none">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Coverage, room by room</p>
+            <h2>See exactly what your membership reaches</h2>
+            <p>
+              A home watch subscription buys something you are never there to watch happen. Select a
+              membership below to light up the rooms, systems and grounds it covers, and see what
+              stays dark.
+            </p>
+          </div>
+
+          <div class="visualizer">
+            <div class="viz-stage">
+              <svg
+                class="viz-figure"
+                viewBox="0 0 1000 750"
+                preserveAspectRatio="xMidYMid meet"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <defs>
+                  <linearGradient id="viz-sky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#1a3025" />
+                    <stop offset="1" stop-color="#0c1912" />
+                  </linearGradient>
+                  <radialGradient id="viz-hearth" cx="0.5" cy="0.75" r="0.8">
+                    <stop offset="0" stop-color="#c8763a" />
+                    <stop offset="1" stop-color="#6b3a1c" />
+                  </radialGradient>
+                </defs>
+
+                <rect width="1000" height="750" fill="url(#viz-sky)" />
+
+                <!-- Distant ridgelines. Depth only; never changes state. -->
+                <path
+                  class="viz-ridge viz-ridge--far"
+                  d="M0 452 L96 414 L186 444 L300 392 L430 436 L560 386 L700 430 L840 392 L1000 424 L1000 620 L0 620 Z"
+                />
+                <path
+                  class="viz-ridge viz-ridge--near"
+                  d="M0 486 L140 450 L300 482 L470 440 L640 478 L820 444 L1000 476 L1000 640 L0 640 Z"
+                />
+
+                <!-- ---------- Zones ---------- -->
+
+                <g class="viz-zone" data-zone="grounds" data-covered="false">
+                  <path
+                    class="viz-fill"
+                    d="M0 506 L104 516 L188 548 L188 750 L0 750 Z M742 692 L820 706 L900 726 L1000 744 L1000 750 L742 750 Z"
+                  />
+                  <path class="viz-fill viz-fill--soft" d="M0 494 L104 506 L188 538 L188 550 L104 518 L0 506 Z" />
+                  <path class="viz-glyph viz-glyph--solid" d="M60 392 L26 508 L94 508 Z" />
+                  <path class="viz-glyph viz-glyph--solid" d="M142 442 L114 530 L170 530 Z" />
+                  <text class="viz-label" x="94" y="596">Grounds</text>
+                </g>
+
+                <g class="viz-zone" data-zone="master-suite">
+                  <rect class="viz-fill" x="200" y="236" width="202" height="146" />
+                  <rect class="viz-glyph viz-glyph--solid" x="240" y="300" width="9" height="58" rx="3" />
+                  <rect class="viz-glyph" x="249" y="326" width="116" height="32" rx="5" />
+                  <rect class="viz-glyph" x="257" y="308" width="34" height="16" rx="5" />
+                  <text class="viz-label" x="301" y="270">Master suite</text>
+                </g>
+
+                <g class="viz-zone" data-zone="ensuite">
+                  <rect class="viz-fill" x="402" y="236" width="126" height="146" />
+                  <path class="viz-glyph" d="M428 320 h74 v20 a16 16 0 0 1 -16 16 h-42 a16 16 0 0 1 -16 -16 z" />
+                  <path class="viz-glyph" d="M424 320 v-18 h16" />
+                  <text class="viz-label" x="465" y="270">Ensuite</text>
+                </g>
+
+                <g class="viz-zone" data-zone="great-room">
+                  <rect class="viz-fill" x="528" y="236" width="202" height="304" />
+                  <path class="viz-glyph" d="M600 236 v58" />
+                  <path class="viz-glyph viz-glyph--solid" d="M584 314 L600 294 L616 314 Z" />
+                  <rect class="viz-glyph" x="556" y="462" width="96" height="14" rx="5" />
+                  <rect class="viz-glyph" x="552" y="476" width="104" height="20" rx="6" />
+                  <rect class="viz-glyph" x="546" y="466" width="12" height="32" rx="5" />
+                  <rect class="viz-glyph" x="650" y="466" width="12" height="32" rx="5" />
+                  <text class="viz-label" x="606" y="366">Great room</text>
+                </g>
+
+                <g class="viz-zone" data-zone="kitchen" data-covered="false">
+                  <rect class="viz-fill" x="200" y="394" width="192" height="146" />
+                  <rect class="viz-glyph viz-glyph--solid" x="218" y="488" width="134" height="9" rx="3" />
+                  <rect class="viz-glyph" x="246" y="497" width="38" height="34" rx="3" />
+                  <path class="viz-glyph" d="M252 508 h26" />
+                  <rect class="viz-glyph" x="352" y="452" width="30" height="79" rx="4" />
+                  <path class="viz-glyph" d="M352 486 h30" />
+                  <text class="viz-label" x="296" y="428">Kitchen</text>
+                </g>
+
+                <g class="viz-zone" data-zone="dining" data-covered="false">
+                  <rect class="viz-fill" x="392" y="394" width="136" height="146" />
+                  <rect class="viz-glyph viz-glyph--solid" x="406" y="482" width="106" height="8" rx="3" />
+                  <path class="viz-glyph" d="M420 490 v34 M498 490 v34" />
+                  <rect class="viz-glyph" x="404" y="458" width="8" height="32" rx="3" />
+                  <rect class="viz-glyph" x="506" y="458" width="8" height="32" rx="3" />
+                  <text class="viz-label" x="460" y="428">Dining</text>
+                </g>
+
+                <g class="viz-zone" data-zone="mechanical">
+                  <rect class="viz-fill" x="200" y="552" width="328" height="122" />
+                  <rect class="viz-glyph" x="228" y="586" width="48" height="72" rx="4" />
+                  <path class="viz-glyph" d="M228 610 h48" />
+                  <rect class="viz-glyph" x="292" y="592" width="36" height="66" rx="17" />
+                  <path class="viz-glyph" d="M252 586 L252 570 L410 570" />
+                  <path class="viz-glyph" d="M348 570 v-12 M410 570 v-12" />
+                  <path class="viz-glyph" d="M310 592 v-14 h34" />
+                  <text class="viz-label" x="420" y="612">Mechanical</text>
+                </g>
+
+                <g class="viz-zone" data-zone="deck" data-covered="false">
+                  <rect class="viz-fill" x="730" y="312" width="216" height="88" />
+                  <rect class="viz-glyph viz-glyph--solid" x="730" y="386" width="214" height="14" rx="2" />
+                  <rect class="viz-glyph viz-glyph--solid" x="734" y="352" width="210" height="7" rx="3" />
+                  <path
+                    class="viz-glyph"
+                    d="M754 359 v27 M784 359 v27 M814 359 v27 M844 359 v27 M874 359 v27 M904 359 v27 M934 359 v27"
+                  />
+                  <rect class="viz-glyph" x="762" y="352" width="8" height="26" rx="3" />
+                  <rect class="viz-glyph" x="762" y="374" width="34" height="8" rx="3" />
+                  <path class="viz-glyph" d="M792 400 V701 M888 400 V723 M940 400 V733" />
+                  <text class="viz-label" x="854" y="338">Deck</text>
+                </g>
+
+                <!-- ---------- Structure. Constant across every tier. ---------- -->
+
+                <g class="viz-structure">
+                  <rect class="viz-stone" x="528" y="552" width="202" height="134" />
+                  <path
+                    class="viz-stone-line"
+                    d="M528 592 h202 M528 632 h202 M580 552 v40 M650 552 v40 M552 592 v40 M618 592 v40 M690 592 v40 M566 632 v54 M640 632 v54 M700 632 v54"
+                  />
+
+                  <rect class="viz-poche" x="188" y="224" width="12" height="462" />
+                  <rect class="viz-poche" x="730" y="224" width="12" height="462" />
+                  <rect class="viz-poche" x="188" y="228" width="554" height="8" />
+                  <rect class="viz-poche" x="188" y="382" width="340" height="12" />
+                  <rect class="viz-poche" x="188" y="540" width="554" height="12" />
+                  <rect class="viz-poche" x="188" y="674" width="554" height="12" />
+
+                  <rect class="viz-partition" x="398" y="236" width="6" height="146" />
+                  <rect class="viz-partition" x="524" y="236" width="6" height="146" />
+                  <rect class="viz-partition" x="388" y="394" width="6" height="146" />
+                  <rect class="viz-partition" x="524" y="394" width="6" height="146" />
+                  <rect class="viz-partition" x="524" y="552" width="6" height="122" />
+
+                  <path class="viz-roof" d="M144 250 L465 62 L786 250" />
+
+                  <rect class="viz-stone" x="694" y="150" width="36" height="390" />
+                  <path class="viz-stone-line" d="M694 212 h36 M694 274 h36 M694 336 h36 M694 398 h36" />
+                  <rect x="701" y="466" width="22" height="42" rx="3" fill="url(#viz-hearth)" />
+
+                  <path class="viz-grade" d="M0 506 L104 516 L188 548 M742 692 L820 706 L900 726 L1000 744" />
+                </g>
+              </svg>
+              <div class="viz-legend" aria-hidden="true">
+                <span><i class="lit"></i>Covered</span>
+                <span><i class="dim"></i>Not included</span>
+              </div>
+            </div>
+
+            <div>
+              <fieldset class="viz-controls">
+                <legend>Choose a membership</legend>
+
+                <label class="viz-option">
+                  <input type="radio" name="tier" value="home-watch" checked />
+                  <span>
+                    <strong>Home Watch</strong>
+                    <em>Founding rate $249/month</em>
+                  </span>
+                </label>
+
+                <label class="viz-option">
+                  <input type="radio" name="tier" value="concierge" />
+                  <span>
+                    <strong>Concierge</strong>
+                    <em>Hands-on support</em>
+                  </span>
+                </label>
+
+                <label class="viz-option">
+                  <input type="radio" name="tier" value="stewardship" />
+                  <span>
+                    <strong>Private Stewardship</strong>
+                    <em>Fully hands-off</em>
+                  </span>
+                </label>
+              </fieldset>
+
+              <p class="viz-readout" data-viz-readout aria-live="polite">
+                <strong>Home Watch covers:</strong> Roof, siding and perimeter walk · Interior
+                walk-through with video report · Water heater, HVAC and plumbing check
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comparison table -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Side by side</p>
+            <h2>The full comparison</h2>
+          </div>
+
+          <div class="table-scroll">
+            <table class="compare" data-compare-table>
+              <caption>
+                All memberships are billed monthly. À la carte services are available to every
+                member.
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Included</th>
+                  <th scope="col" data-tier-col="home-watch">Home Watch</th>
+                  <th scope="col" data-tier-col="concierge">Concierge</th>
+                  <th scope="col" data-tier-col="stewardship">Stewardship</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Scheduled inspections with video walk-through</th>
+                  <td data-tier-col="home-watch"><span class="yes" aria-label="Included">✓</span></td>
+                  <td data-tier-col="concierge"><span class="yes" aria-label="Included">✓</span></td>
+                  <td data-tier-col="stewardship"><span class="yes" aria-label="Included">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Leak, crack, storm and environmental checks</th>
+                  <td data-tier-col="home-watch"><span class="yes" aria-label="Included">✓</span></td>
+                  <td data-tier-col="concierge"><span class="yes" aria-label="Included">✓</span></td>
+                  <td data-tier-col="stewardship"><span class="yes" aria-label="Included">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Water heater, HVAC and plumbing condition check</th>
+                  <td data-tier-col="home-watch"><span class="yes" aria-label="Included">✓</span></td>
+                  <td data-tier-col="concierge"><span class="yes" aria-label="Included">✓</span></td>
+                  <td data-tier-col="stewardship"><span class="yes" aria-label="Included">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Photo and video documentation of condition</th>
+                  <td data-tier-col="home-watch"><span class="yes" aria-label="Included">✓</span></td>
+                  <td data-tier-col="concierge"><span class="yes" aria-label="Included">✓</span></td>
+                  <td data-tier-col="stewardship"><span class="yes" aria-label="Included">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Prompt notification of issues found</th>
+                  <td data-tier-col="home-watch"><span class="yes" aria-label="Included">✓</span></td>
+                  <td data-tier-col="concierge"><span class="yes" aria-label="Included">✓</span></td>
+                  <td data-tier-col="stewardship"><span class="yes" aria-label="Included">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Verification that cleaning and maintenance was completed</th>
+                  <td data-tier-col="home-watch"><span class="yes" aria-label="Included">✓</span></td>
+                  <td data-tier-col="concierge"><span class="yes" aria-label="Included">✓</span></td>
+                  <td data-tier-col="stewardship"><span class="yes" aria-label="Included">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Home arrival preparation</th>
+                  <td data-tier-col="home-watch"><span class="no" aria-label="Not included">·</span></td>
+                  <td data-tier-col="concierge"><span class="yes" aria-label="Included">✓</span></td>
+                  <td data-tier-col="stewardship"><span class="yes" aria-label="Included">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Restocking of household essentials</th>
+                  <td data-tier-col="home-watch"><span class="no" aria-label="Not included">·</span></td>
+                  <td data-tier-col="concierge"><span class="yes" aria-label="Included">✓</span></td>
+                  <td data-tier-col="stewardship"><span class="yes" aria-label="Included">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Grocery and supply coordination</th>
+                  <td data-tier-col="home-watch"><span class="no" aria-label="Not included">·</span></td>
+                  <td data-tier-col="concierge"><span class="yes" aria-label="Included">✓</span></td>
+                  <td data-tier-col="stewardship"><span class="yes" aria-label="Included">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Vendor scheduling, follow-up and quality checks</th>
+                  <td data-tier-col="home-watch"><span class="no" aria-label="Not included">·</span></td>
+                  <td data-tier-col="concierge"><span class="yes" aria-label="Included">✓</span></td>
+                  <td data-tier-col="stewardship"><span class="yes" aria-label="Included">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Seasonal home preparation</th>
+                  <td data-tier-col="home-watch"><span class="no" aria-label="Not included">·</span></td>
+                  <td data-tier-col="concierge"><span class="yes" aria-label="Included">✓</span></td>
+                  <td data-tier-col="stewardship"><span class="yes" aria-label="Included">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Priority scheduling and service requests</th>
+                  <td data-tier-col="home-watch"><span class="no" aria-label="Not included">·</span></td>
+                  <td data-tier-col="concierge"><span class="no" aria-label="Not included">·</span></td>
+                  <td data-tier-col="stewardship"><span class="yes" aria-label="Included">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Advanced vendor management</th>
+                  <td data-tier-col="home-watch"><span class="no" aria-label="Not included">·</span></td>
+                  <td data-tier-col="concierge"><span class="no" aria-label="Not included">·</span></td>
+                  <td data-tier-col="stewardship"><span class="yes" aria-label="Included">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Event preparation and seasonal decorating</th>
+                  <td data-tier-col="home-watch"><span class="no" aria-label="Not included">·</span></td>
+                  <td data-tier-col="concierge"><span class="no" aria-label="Not included">·</span></td>
+                  <td data-tier-col="stewardship"><span class="yes" aria-label="Included">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Airbnb guest readiness support</th>
+                  <td data-tier-col="home-watch"><span class="no" aria-label="Not included">·</span></td>
+                  <td data-tier-col="concierge"><span class="no" aria-label="Not included">·</span></td>
+                  <td data-tier-col="stewardship"><span class="yes" aria-label="Included">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Personalized stewardship plan for the property</th>
+                  <td data-tier-col="home-watch"><span class="no" aria-label="Not included">·</span></td>
+                  <td data-tier-col="concierge"><span class="no" aria-label="Not included">·</span></td>
+                  <td data-tier-col="stewardship"><span class="yes" aria-label="Included">✓</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- À la carte -->
+      <section class="section section--sunken">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Beyond the membership</p>
+            <h2>À la carte services</h2>
+            <p>
+              Members can request anything below outside their membership level. Pricing varies with
+              scope, and you will always have an estimate before work begins.
+            </p>
+          </div>
+
+          <div class="grid grid--2">
+            <div class="card">
+              <h3>Add-on services for members</h3>
+              <ul class="card-list">
+                <li>Additional home inspections or property visits</li>
+                <li>Grocery and household supply stocking</li>
+                <li>Owner and guest arrival preparation</li>
+                <li>Holiday decorating coordination</li>
+                <li>Event preparation and assistance</li>
+                <li>Vendor project oversight</li>
+                <li>Home organization projects</li>
+                <li>Special errands and personalized requests</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>One-time services, no membership required</h3>
+              <p>
+                A straightforward way to experience the standard of care before committing to a
+                membership.
+              </p>
+              <ul class="card-list">
+                <li>Single property inspection with video report</li>
+                <li>Pre-arrival home preparation</li>
+                <li>Post-storm or weather-related property check</li>
+                <li>Vacation rental readiness check</li>
+                <li>Vendor coordination for a specific project</li>
+                <li>Home inventory and organization assistance</li>
+                <li>Seasonal decorating or preparation</li>
+              </ul>
+              <a class="btn btn--ghost" href="/contact.html" style="margin-top: 1.5rem">Request a one-time visit</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Billing FAQ -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Billing</p>
+            <h2>Common questions about memberships</h2>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq">
+              <summary>What does the Founding Member rate actually lock in?</summary>
+              <div class="faq-body">
+                <p>
+                  The first ten homes to enroll in the Home Watch membership pay the founding rate
+                  of $249 a month and keep that rate for as long as the membership stays active.
+                  Founding members receive exactly the same service as every member who follows.
+                  Once ten places are filled, the founding rate closes.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq">
+              <summary>Is there a contract or minimum term?</summary>
+              <div class="faq-body">
+                <p>
+                  Memberships are billed monthly. Enrollment requires acceptance of the Service
+                  Agreement and Liability Waiver, which set out scope, access and responsibilities
+                  in writing. That protects both of us, and it is not a lock-in period.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq">
+              <summary>How do I pay?</summary>
+              <div class="faq-body">
+                <p>
+                  Memberships bill automatically each month by credit card or bank transfer. À la
+                  carte and one-time services are invoiced separately once the scope is agreed.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq">
+              <summary>Can I change membership levels later?</summary>
+              <div class="faq-body">
+                <p>
+                  Yes. Most owners start with Home Watch and move up once they see how much of the
+                  day-to-day they would rather hand over. A founding rate follows you if you move up
+                  and later return to Home Watch.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq">
+              <summary>What if something needs to be repaired?</summary>
+              <div class="faq-body">
+                <p>
+                  We document it, notify you promptly, and coordinate the right vendor once you
+                  approve. Nothing is spent on your behalf without a conversation first.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!--#include partials/cta.html -->
+    </main>
+
+    <!--#include partials/footer.html -->
+    <script type="module" src="/src/js/visualizer.js"></script>
+  </body>
+</html>

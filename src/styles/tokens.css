@@ -1,0 +1,111 @@
+/* ==========================================================================
+   White Oak Stewardship — design tokens
+   Working palette per 3D UI/UX Plan Appendix A. Superseded by the Phase 1
+   brand kit (due Aug 14, 2026) — change values here only, never in components.
+   ========================================================================== */
+
+:root {
+  /* --- Forest: the brand's ground. Deep, cool, protective. --- */
+  --forest-950: #0e1b15;
+  --forest-900: #16281f;
+  --forest-800: #1e352a;
+  --forest-700: #2a4638;
+  --forest-600: #3a5c49;
+  --forest-500: #4d7360;
+
+  /* --- Cream / stone: paper, light, breathing room. --- */
+  --cream-050: #faf6ee;
+  --cream-100: #f4eee2;
+  --cream-200: #e9dcc3;
+  --stone-300: #d3c7ae;
+  --stone-400: #b3a68a;
+
+  /* --- Gold: the accent. Used sparingly or it stops meaning anything. --- */
+  --gold-700: #7f6034; /* text-safe on cream: 5.37:1 on cream-050 */
+  --gold-600: #9c7942;
+  --gold-500: #b8925a;
+  --gold-400: #cba86c;
+  --gold-300: #dfc48e;
+
+  /* --- Ember: single warm signal colour (alerts, founding-member flags). --- */
+  --ember-600: #8e4826;
+  --ember-500: #a8582f;
+
+  /* --- Ink: body text on light. --- */
+  --ink-900: #1d221e;
+  --ink-700: #363d38;
+  --ink-600: #4b5148;
+  --ink-500: #666d64;
+
+  /* --- Semantic --- */
+  --bg: var(--cream-050);
+  --bg-raised: #fffdf8;
+  --bg-sunken: var(--cream-100);
+  --bg-inverse: var(--forest-950);
+  --text: var(--ink-900);
+  --text-muted: var(--ink-600);
+  --text-inverse: var(--cream-100);
+  --text-inverse-muted: var(--stone-300);
+  --line: #e2d8c4;
+  --line-strong: var(--stone-300);
+  --accent: var(--gold-500);
+  --accent-ink: var(--gold-700);
+
+  /* --- Type --- */
+  --font-display: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  --font-body: 'Jost', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* Fluid type scale — 375px floor, 1440px ceiling. */
+  --step--1: clamp(0.82rem, 0.79rem + 0.13vw, 0.89rem);
+  --step-0: clamp(1rem, 0.96rem + 0.18vw, 1.09rem);
+  --step-1: clamp(1.2rem, 1.12rem + 0.35vw, 1.42rem);
+  --step-2: clamp(1.5rem, 1.34rem + 0.68vw, 1.95rem);
+  --step-3: clamp(1.85rem, 1.55rem + 1.3vw, 2.7rem);
+  --step-4: clamp(2.25rem, 1.7rem + 2.35vw, 3.75rem);
+  --step-5: clamp(2.6rem, 1.75rem + 3.6vw, 4.9rem);
+
+  --tracking-eyebrow: 0.22em;
+  --tracking-tight: -0.015em;
+
+  /* --- Space (8pt-ish, fluid at the large end) --- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: clamp(3rem, 2rem + 4vw, 5rem);
+  --sp-9: clamp(4rem, 2.5rem + 6vw, 7.5rem);
+
+  /* --- Shape --- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* --- Elevation. Warm shadows, never neutral grey. --- */
+  --shadow-1: 0 1px 2px rgba(22, 40, 31, 0.06), 0 2px 8px rgba(22, 40, 31, 0.05);
+  --shadow-2: 0 2px 6px rgba(22, 40, 31, 0.07), 0 10px 28px rgba(22, 40, 31, 0.09);
+  --shadow-3: 0 4px 12px rgba(22, 40, 31, 0.09), 0 24px 56px rgba(22, 40, 31, 0.14);
+
+  /* --- Motion. "Slow enough to feel like weather." --- */
+  --ease-out: cubic-bezier(0.22, 0.68, 0.28, 1);
+  --ease-in-out: cubic-bezier(0.5, 0, 0.2, 1);
+  --dur-fast: 160ms;
+  --dur-base: 280ms;
+  --dur-slow: 400ms;
+
+  /* --- Layout --- */
+  --measure: 68ch;
+  --container: 1180px;
+  --container-narrow: 780px;
+  --gutter: clamp(1.25rem, 0.9rem + 1.6vw, 2.5rem);
+  --header-h: 74px;
+}
+
+@media (max-width: 700px) {
+  :root {
+    --header-h: 62px;
+  }
+}

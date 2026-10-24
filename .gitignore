@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build output — Vercel builds this from source on every deploy.
+dist/
+
+# Vercel CLI local link + pulled env
+.vercel/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Editor / OS noise
+.DS_Store
+Thumbs.db
+.~lock.*#
+*.log
+
+# Internal handoff notes
+HANDOFF.md
+
+# Planning folder (lives beside this repo)
+WOS Site 2.0/
