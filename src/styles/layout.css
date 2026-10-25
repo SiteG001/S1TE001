@@ -415,3 +415,8 @@
 .footer-bottom a {
   color: inherit;
 }
+
+.footer-legal {
+  font-size: 0.75rem;
+  margin: 0;
+}

@@ -76,12 +76,15 @@ export default async function handler(req, res) {
         to: lead.email,
         subject: 'Your White Oak Stewardship consultation request',
         text:
-          `Thank you, ${lead.name}. Katie will call or email within one business day.\n\n` +
-          `If anything is urgent, call or text 470-859-3583.\n\nWhite Oak Stewardship`,
+          `Thank you, ${lead.name}. Your steward will call or email within one business day.\n\n` +
+          `If anything is urgent, call or text 470-859-3583.\n\nWhite Oak Stewardship\n` +
+          `Services provided by Jacks and Ground Innovations LLC\n` +
+          `Privacy: https://whiteoakstewardship.com/legal/privacy.html | Terms: https://whiteoakstewardship.com/legal/terms.html`,
         html:
-          `<p>Thank you, ${esc(lead.name)}. Katie will call or email within one business day.</p>` +
+          `<p>Thank you, ${esc(lead.name)}. Your steward will call or email within one business day.</p>` +
           `<p>If anything is urgent, call or text <a href="tel:+14708593583">470-859-3583</a>.</p>` +
-          `<p>White Oak Stewardship</p>`,
+          `<p>White Oak Stewardship<br>Services provided by Jacks and Ground Innovations LLC</p>` +
+          `<p><a href="https://whiteoakstewardship.com/legal/privacy.html">Privacy</a> · <a href="https://whiteoakstewardship.com/legal/terms.html">Terms</a></p>`,
       })
       .catch(() => {}); // an auto-reply failure must not fail the lead
   } catch (err) {

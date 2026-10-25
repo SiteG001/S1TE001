@@ -233,8 +233,9 @@ function initConsultForm() {
       success.tabIndex = -1;
       success.innerHTML = `
         <h2>Thank you, ${escapeHtml(first)}.</h2>
-        <p>Katie will call or email within one business day. A copy of this note is on its way to your inbox.</p>
-        <p>Something urgent? Call or text <a href="tel:+14708593583">470-859-3583</a>.</p>`;
+        <p>Your steward will call or email within one business day. A copy of this note is on its way to your inbox.</p>
+        <p>Something urgent? Call or text <a href="tel:+14708593583">470-859-3583</a>.</p>
+        <p class="form-note">Services provided by Jacks and Ground Innovations LLC. <a href="/legal/privacy.html">Privacy</a> · <a href="/legal/terms.html">Terms</a></p>`;
       form.replaceWith(success);
       success.focus();
       track('consultation_submitted', { tier: data.tier || 'not_sure' });
