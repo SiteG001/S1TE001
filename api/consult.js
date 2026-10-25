@@ -1,8 +1,9 @@
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const TO = process.env.CONSULT_TO; // consultations@WhiteOakStewardship.com
+const TO = process.env.CONSULT_TO || 'consultations@WhiteOakStewardship.com';
 const FROM = process.env.CONSULT_FROM; // "Katie at White Oak <katie@WhiteOakStewardship.com>"
+const LEAD_FROM = process.env.CONSULT_LEAD_FROM || "White Oak Website <website@WhiteOakStewardship.com>"; // internal notice, not from Katie
 const MIN_MS = 3000; // faster than this is a bot
 const MAX_MS = 1000 * 60 * 60 * 6; // a stale tab is fine; older than this is replay
 
@@ -51,7 +52,7 @@ export default async function handler(req, res) {
   // 3. Send: lead first (this is the one that matters), then the auto-reply
   try {
     await resend.emails.send({
-      from: FROM,
+      from: LEAD_FROM,
       to: TO,
       replyTo: lead.email,
       subject: `Consultation request: ${lead.name} (${lead.tier})`,
